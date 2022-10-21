@@ -103,3 +103,5 @@ loadMoreButton.addEventListener('click', () => {
     loadPokemonItens(offset, limit);
   }
 });
+
+document.querySelector('.fechar').click();
