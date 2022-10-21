@@ -1,6 +1,7 @@
 const pokeApi = {};
 function convertpokeApiDetailToPokemon(pokemonDetail) {
   const pokemon = new Pokemon();
+
   pokemon.name = pokemonDetail.name;
   pokemon.number = pokemonDetail.id;
 
@@ -10,6 +11,16 @@ function convertpokeApiDetailToPokemon(pokemonDetail) {
   pokemon.type = type;
 
   pokemon.photo = pokemonDetail.sprites.other.dream_world.front_default;
+  pokemon.height = pokemonDetail.height;
+  pokemon.weight = pokemonDetail.weight;
+
+  const stats = pokemonDetail.stats.map((stat) => stat.base_stat);
+  pokemon.stats.hp = stats[0];
+  pokemon.stats.attack = stats[1];
+  pokemon.stats.defense = stats[2];
+  pokemon.stats.special_attack = stats[3];
+  pokemon.stats.special_defense = stats[4];
+  pokemon.stats.speed = stats[5];
 
   return pokemon;
 }

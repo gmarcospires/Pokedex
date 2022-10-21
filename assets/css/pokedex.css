@@ -16,7 +16,9 @@
   color: white;
   margin-bottom: 0.25rem;
   text-transform: capitalize;
+  font-weight: 700;
 }
+
 .pokemon .number {
   font-weight: bold;
   color: black;
@@ -30,7 +32,8 @@
   align-items: center;
   justify-content: space-between;
 }
-.pokemon .detail .types {
+.pokemon .detail .types,
+.pokemon .stats {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -38,17 +41,20 @@
 .pokemon .detail .types .type {
   color: white;
   padding: 0.25rem 0.5rem;
-  font-size: 0.625rem;
+  font-size: 0.7rem;
   margin: 0.5rem 0;
   border-radius: 1rem;
   display: flex;
   justify-content: center;
   filter: brightness(1.2);
+  text-transform: capitalize;
+  font-weight: 300;
 }
 
 .pokemon .detail img {
   max-width: 100%;
   height: 70px;
+  min-width: 100px;
 }
 
 .pagination {
@@ -68,6 +74,55 @@
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
   font-size: 0.625rem;
+}
+
+#modal div {
+  align-self: center;
+}
+
+#modal .pokemon {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+#modal hr {
+  width: 100%;
+}
+
+#modal .pokemon .detail {
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+#modal .pokemon .detail span {
+  height: 100%;
+}
+
+#modal .pokemon .detail .stats {
+  border-left: black 2px dashed;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+}
+
+#modal .pokemon .detail .types {
+  padding-right: 1rem;
+}
+
+#modal .pokemon .detail .number {
+  font-size: 0.9rem;
+}
+#modal .pokemon .detail .name,
+#modal .pokemon .detail .number {
+  color: black;
+  opacity: 1;
+  text-align: center;
+  align-items: center;
+  margin: 1vh;
 }
 
 .normal {
